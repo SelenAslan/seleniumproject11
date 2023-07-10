@@ -20,7 +20,6 @@ public class WebDriverFactory {
     private static WebDriver getDriver(String browserType) {
 
 
-
         if (browserType.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
