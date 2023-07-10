@@ -11,7 +11,6 @@ public class T1_locators_getText {
     public static void main(String[] args) {
         //TC #1: NextBaseCRM, locators and getText() practice
         //1- Open a chrome browser
-
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -23,7 +22,7 @@ public class T1_locators_getText {
         //3- Enter incorrect username: “incorrect”
 
         WebElement inputUserName = driver.findElement(By.name("USER_LOGIN"));
-inputUserName.sendKeys("incorrect");
+        inputUserName.sendKeys("incorrect");
 
         //4- Enter incorrect password: “incorrect”
         WebElement inputPassword = driver.findElement(By.name("USER_PASSWORD"));
