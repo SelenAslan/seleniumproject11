@@ -33,6 +33,7 @@ public class T3_getAttribute_cssSelector {
             System.out.println("expectedButtonText = " + expectedButtonText);
             System.out.println("Log in button verification FAILED!!");
         }
+        driver.close();
 
         //PS: Inspect and decide which locator you should be using to locate web
         //elements.

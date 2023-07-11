@@ -62,7 +62,7 @@ public class T2_getText_getAttribute {
         }
 
 
-        //driver.close();
+        driver.close();
 
 
     }
