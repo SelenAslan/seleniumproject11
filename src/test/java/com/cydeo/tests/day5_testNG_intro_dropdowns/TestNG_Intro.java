@@ -30,7 +30,7 @@ public class TestNG_Intro {
     public void test2(){
         System.out.println("Test 2 running..");
         //AssertTrue
-        String actual = "apple2";
+        String actual = "apple";
         String expected = "apple";
 
         Assert.assertTrue(actual.equals(expected));
