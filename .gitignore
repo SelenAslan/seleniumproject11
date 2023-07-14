@@ -1,3 +1,4 @@
 # Project exclude paths
 /target/
-/src/test/java/com/cydeo/utilities/WebDriverFactory_2.java
+*.iml
+.idea
