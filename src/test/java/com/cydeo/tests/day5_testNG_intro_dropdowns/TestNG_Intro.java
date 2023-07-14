@@ -33,7 +33,7 @@ public class TestNG_Intro {
         String actual = "apple";
         String expected = "apple";
 
-        Assert.assertTrue(actual.equals(expected));
+        Assert.assertTrue(actual.equals(expected), "your message comes here");
 
 
     }
