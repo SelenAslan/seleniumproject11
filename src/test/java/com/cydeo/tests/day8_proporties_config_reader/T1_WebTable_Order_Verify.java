@@ -1,6 +1,7 @@
 package com.cydeo.tests.day8_proporties_config_reader;
 
 import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.WebTableUtilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +25,7 @@ public class T1_WebTable_Order_Verify {
     }
 
     @Test
-    public void order_name_verify_test(){
+    public void order_name_verify_test() {
         //Locate the cell that has Bob Martin text in it.
         WebElement bobMartinCell = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
 
@@ -40,7 +41,7 @@ public class T1_WebTable_Order_Verify {
 
         //3. Verify Bob Martin’s order date is as expected
 
-WebElement orderDateBob = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']/following-sibling::td[3]"));
+        WebElement orderDateBob = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']/following-sibling::td[3]"));
 
 
         String expectedOrder = "12/31/2021";
@@ -48,12 +49,20 @@ WebElement orderDateBob = driver.findElement(By.xpath("//table[@id='ctl00_MainCo
 
         Assert.assertEquals(actualOrder, expectedOrder);
 
-
+    }
 
         //Expected: 12/31/2021
 
 
 
+    @Test
+    public void test2(){
+
+      String customerOrderDate1 =  WebTableUtilities.returnOrderDate(driver, "Alexandra Gray");
+        System.out.println("customerOrderDate1 = " + customerOrderDate1);
+
     }
+
+
 
 }

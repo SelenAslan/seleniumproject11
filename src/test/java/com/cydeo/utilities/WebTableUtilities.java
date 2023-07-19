@@ -17,11 +17,15 @@ public class WebTableUtilities {
     public static String returnOrderDate(WebDriver driver, String costumerName){
 
     String locator = "//td[.='"+costumerName+"']/following-sibling::td[3]";
-
-        WebElement customerDateCell = driver.findElement(By.xpath(locator));
-
-        return customerDateCell.getText();
+    WebElement customerDateCell = driver.findElement(By.xpath(locator));
+    return customerDateCell.getText();
 
     }
+
+    //public static String returnOrderDate2(WebDriver driver, String costumerName){
+    //
+    //        return driver.findElement(By.xpath("//td[.='"+costumerName+"']/following-sibling::td[3]")).getText();
+    //
+    //    }
 
 }
