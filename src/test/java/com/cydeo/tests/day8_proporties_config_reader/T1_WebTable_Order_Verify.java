@@ -51,10 +51,6 @@ public class T1_WebTable_Order_Verify {
 
     }
 
-        //Expected: 12/31/2021
-
-
-
     @Test
     public void test2(){
 
@@ -63,6 +59,11 @@ public class T1_WebTable_Order_Verify {
 
     }
 
+    @Test
+    public void test3(){
 
+        WebTableUtilities.orderVerify(driver, "Bart Fisher", "01/16/2021");
+
+    }
 
 }
