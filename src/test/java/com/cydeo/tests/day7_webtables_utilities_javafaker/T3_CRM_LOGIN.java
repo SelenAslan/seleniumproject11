@@ -1,6 +1,7 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
 import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.CRM_Utilities;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -52,6 +53,24 @@ public class T3_CRM_LOGIN {
         WebElement LogInButton= driver.findElement(By.xpath("//input[@value='Log In']"));
         LogInButton.click();
 
+
+        BrowserUtils.verifyTitle(driver, "(1) Portal");
+
+    }
+
+
+    @Test
+    public void crm_login_test_2 () {
+
+
+        //TC #3: Login scenario
+        //1. Create new test and make setups
+        //2. Go to : http://login1.nextbasecrm.com/
+
+
+        driver.get("https://login1.nextbasecrm.com/");
+
+        CRM_Utilities.crm_login(driver);
 
         BrowserUtils.verifyTitle(driver, "(1) Portal");
 
