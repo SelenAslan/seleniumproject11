@@ -70,7 +70,28 @@ public class T3_CRM_LOGIN {
 
         driver.get("https://login1.nextbasecrm.com/");
 
+
+        //Calling my utility method to login helpdesk1
         CRM_Utilities.crm_login(driver);
+
+        BrowserUtils.verifyTitle(driver, "(1) Portal");
+
+    }
+
+    @Test
+    public void crm_login_test_3 () {
+
+
+        //TC #3: Login scenario
+        //1. Create new test and make setups
+        //2. Go to : http://login1.nextbasecrm.com/
+
+
+        driver.get("https://login1.nextbasecrm.com/");
+
+
+        //Calling my utility method to login helpdesk1
+        CRM_Utilities.crm_login(driver, "helpdesk1@cydeo.com", "UserUser");
 
         BrowserUtils.verifyTitle(driver, "(1) Portal");
 
