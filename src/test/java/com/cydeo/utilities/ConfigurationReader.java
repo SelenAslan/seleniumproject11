@@ -10,6 +10,7 @@ public class ConfigurationReader {
 
     static {
         try {
+
         FileInputStream file = new FileInputStream("configuration.properties");
 
         properties.load(file);
@@ -20,7 +21,10 @@ public class ConfigurationReader {
             System.out.println("File not found in the ConfigurationReader class");
             e.printStackTrace();
         }
-
-
     }
+
+    public static String gwtProperty(String keyword){
+        return properties.getProperty(keyword);
+    }
+
 }
